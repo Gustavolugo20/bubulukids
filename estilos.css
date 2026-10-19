@@ -1,0 +1,41 @@
+:root {
+  --fondo: #fff8ec;
+  --texto: #2b2140;
+  --suave: #6b5f80;
+  --rosa: #ff3d8b;
+  --azul: #2a4bd8;
+  --tarjeta: #ffffff;
+  --borde: #f1e4ff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #1d1630;
+    --texto: #f5efff;
+    --suave: #c8bde0;
+    --tarjeta: #2a2142;
+    --borde: #3b2f5c;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 17px/1.6 "Nunito", "Arial Rounded MT Bold", system-ui, sans-serif;
+}
+.banner { display: block; width: 100%; max-height: 320px; object-fit: cover; }
+main { max-width: 760px; margin: -70px auto 48px; padding: 0 16px; position: relative; }
+.logo { width: 132px; height: 132px; border-radius: 50%; border: 6px solid var(--fondo); display: block; }
+h1 { font-size: 2.2rem; margin: 12px 0 4px; color: var(--rosa); }
+h2 { color: var(--azul); margin-top: 32px; font-size: 1.3rem; }
+@media (prefers-color-scheme: dark) { h2 { color: #8fa6ff; } }
+.lema { color: var(--suave); margin: 0 0 24px; }
+.tarjeta { background: var(--tarjeta); border: 2px solid var(--borde); border-radius: 20px; padding: 20px 24px; margin: 16px 0; }
+.boton {
+  display: inline-block; background: var(--rosa); color: #fff; text-decoration: none;
+  padding: 12px 22px; border-radius: 999px; font-weight: 700; margin: 8px 8px 0 0;
+}
+.boton.secundario { background: var(--azul); }
+a { color: var(--rosa); }
+footer { color: var(--suave); font-size: .9rem; margin-top: 40px; }
+ul { padding-left: 1.2rem; }
